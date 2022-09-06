@@ -1,0 +1,1 @@
+wget https://ftp.gnu.org/gnu/parallel/parallel-20220822.tar.bz2

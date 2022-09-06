@@ -1,0 +1,52 @@
+1. npm init
+2. npm install typescript --save
+3. Replace in package.json:
+
+"scripts": {
+    "build": "tsc -p .",
+    "start": "npm run build -- -w"
+},
+
+4. in cmd, notepad index.ts
+```
+let helloString:string = "Hello World"
+console.log(helloString)
+```
+
+5. Run in cmd, npx tsc --init : to create tsconfig.json
+
+6. Run in cmd:
+For build only: npm run build
+For building + live watching : npm start
+
+If npm run build: equivalent JS file is generated to TS file
+
+
+**Reverse engineer this:**
+yarn workspace @myschneider/ciam-utils build
+
+yarn workspace @myschneider/aws-utils build
+
+cat amplify/backend/function/**/package.json | grep "@amplify" | sed s/\"name\":/"yarn workspace"/ | sed s/\,/" build"/ | sed s/\"//g > tempscript.sh
+
+cat tempscript.sh | while read line; do echo $line; $line; done
+
+rm tempscript.sh
+
+-----
+Q. What can I do?
+A. 
+1. Make a common text file or sh script file to have build command for every folder or module, line by line and then execute all of them concurrently?
+
+2. https://www.npmjs.com/package/concurrently
+
+3. 
+
+npm run build --prefix ./module-10
+
+
+
+---
+Helpful links:
+1. https://linguinecode.com/post/how-to-run-multiple-npm-scripts-in-parallel (How to run multiple NPM scripts in parallel)
+2. https://stackoverflow.com/questions/36172442/how-can-i-get-npm-start-at-a-different-directory (How can I get npm start at a different directory?)

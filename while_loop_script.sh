@@ -1,0 +1,1 @@
+cat all_modules.txt|while read url;do npm run build --prefix ./"$url";done
