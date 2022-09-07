@@ -1,0 +1,1 @@
+cat all_modules.txt|parallel -j 5 npm run build --prefix ./{}
