@@ -1,10 +1,10 @@
-./module-01
-./module-02
-./module-03
-./module-04
-./module-05
-./module-06
-./module-07
-./module-08
-./module-09
-./module-10
+npm install --prefix ./module-01
+npm install --prefix ./module-02
+npm install --prefix ./module-03
+npm install --prefix ./module-04
+npm install --prefix ./module-05
+npm install --prefix ./module-06
+npm install --prefix ./module-07
+npm install --prefix ./module-08
+npm install --prefix ./module-09
+npm install --prefix ./module-10
